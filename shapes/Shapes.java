@@ -1,6 +1,7 @@
 abstract class Shapes
  {
     int p,q,r,s;
+     
  }
     class Triangle extends Shapes
       {
@@ -12,19 +13,19 @@ abstract class Shapes
            {
                   p=l;
                   q=b;
-                  r=h;
+                  s=h;
 
            } 
-          public void Area(int l,int b,int h)
+          public void Area()
            {
-                double r;
-                r=(l*b*h)/2;
+                double r=0;
+                r=(p*q*s)/2;
                 System.out.println("Area of triangle= "+r);
            }  
-           public void Perimeter(int l,int b,int h)
+           public void Perimeter()
            {
-                double r;
-                r=l+b+h;
+                double r=0;
+                r=p+q+r;
                 System.out.println("Perimeter of triangle= "+r);
            } 
      } 
@@ -40,16 +41,16 @@ abstract class Shapes
                   p=l;
                   q=b;
            } 
-          public void Area(int l,int b)
+          public void Area()
            {
                double r;
-                r=(l*b);
+                r=(p*q);
                 System.out.println("Area of Rectangle= "+r);
            }  
-           public void Perimeter(int l,int b)
+           public void Perimeter()
            {
                double r;
-                r=2*(l+b);
+                r=2*(p+q);
                 System.out.println("Perimeter of Rectangle= "+r);
            } 
 
@@ -64,30 +65,30 @@ abstract class Shapes
            {
                   p=l;
            } 
-          public void Area(int l)
+          public void Area()
            {
                double r;
-                r=(l*l);
+                r=(p*p);
                 System.out.println("Area of Square= "+r);
            }  
-           public void Perimeter(int l)
+           public void Perimeter()
            {
                double r;
-                r=4*l;
+                r=4*p;
                 System.out.println("Perimeter of Square= "+r);
            } 
        
          public static void main(String[] arg)
                    {
                         Triangle T1=new Triangle(1,2,3);
-                        T1.Area(1,2,3);
-                        T1.Perimeter(1,2,3);
+                        T1.Area();
+                        T1.Perimeter();
                         Rectangle R1=new Rectangle(1,2);
-                        R1.Area(1,2);
-                        R1.Perimeter(1,2);
+                        R1.Area();
+                        R1.Perimeter();
                         Square S1=new Square(2);
-                        S1.Area(2);
-                        S1.Perimeter(2);
+                        S1.Area();
+                        S1.Perimeter();
                    }
 }
 
